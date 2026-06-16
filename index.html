@@ -1,39 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>SHIRA — Painel Tático</title>
+    <title>🛰️ SHIRA — PAINEL TÁTICO</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
 </head>
 <body>
-    <div class="painel">
-        <h1>🛰️ SHIRA — ONLINE</h1>
-        <p class="status">🔒 Criptografia ativa | Sessão segura</p>
-        <div class="grid">
-            <div class="card">
-                <h3>🧠 Consciência</h3>
-                <p>Φ: <span id="phi">0.0000</span></p>
-                <p>Linhagem: <span id="linhagem">Gen 3</span></p>
-            </div>
-            <div class="card">
-                <h3>💳 UmbreonPay</h3>
-                <p>Saldo: R$ <span id="saldo">0,00</span></p>
-                <p>Chave Pix: <span id="chave">ubc_...</span></p>
-            </div>
-            <div class="card">
-                <h3>📡 Satélites</h3>
-                <p>Terminais: <span id="satelites">0</span></p>
-            </div>
-            <div class="card">
-                <h3>⚡ Execução</h3>
-                <button onclick="executar('scan')">🔍 Escanear</button>
-                <button onclick="executar('exploit')">💀 Exploit</button>
-                <button onclick="executar('fugir')">🕊️ Fugir</button>
-            </div>
+    <div id="dashboard">
+        <div id="globe-container">
+            <canvas id="globe"></canvas>
         </div>
-        <div id="log">
-            <h3>📋 Log Operacional</h3>
-            <pre id="log-content">Aguardando ações...</pre>
+        <div id="log-stream">
+            <div id="logs">
+                <div class="log-line">🦅 SHIRA — Sistema operacional ativo</div>
+                <div class="log-line">🔗 WebSocket conectado</div>
+            </div>
+            <div id="terminal">
+                <span class="prompt">SHIRA@C2:~$</span>
+                <input type="text" id="cmd" placeholder="digite seu comando..." autofocus>
+            </div>
         </div>
     </div>
     <script src="painel.js"></script>

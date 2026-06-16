@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background: #050505;
+    color: #00FF66;
+    font-family: 'Share Tech Mono', monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    background: #0a0a0a;
+    padding: 40px;
+    border: 1px solid #00FF66;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}
+h1 { color: #00FF66; font-size: 32px; margin-bottom: 10px; }
+.sub { color: #888; font-size: 14px; margin-bottom: 30px; }
+input {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #00FF66;
+    color: #00FF66;
+    font-family: monospace;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #00FF66;
+    color: #00FF66;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover { background: #00FF66; color: #000; }
+.erro { color: #FF0040; font-size: 14px; margin-top: 10px; display: none; }
